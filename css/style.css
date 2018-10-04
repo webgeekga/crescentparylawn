@@ -596,35 +596,6 @@ h3.agile_tittle span {
     font-size: 1em;
 }
 
-
-/*-- //skills --*/
-
-.skills {
-    background: url(../images/banner4.jpg)no-repeat 0px 0px;
-      background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    padding: 0;
-    min-height: 700px;
-}
-
-h3.agile_tittle.two {
-    color: #252525;
-}
-
-.bar-grids.w3-agile {
-    padding: 5em 5em;
-}
-
-.wthree_skills {
-    margin-top: 4em;
-}
-
-
-/*-- //skills --*/
-
-
 /*-- services --*/
 
 .services {
@@ -848,15 +819,6 @@ p.sub_cap {
 
 
 /*-- /contact --*/
-
-.contact_img_agile {
-    background: url(../images/contact.jpg) no-repeat 0px 0px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    min-height: 800px;
-}
 
 .contact-form.agile_inner_grids {
     padding: 5em 5em;
@@ -1340,9 +1302,6 @@ p.agileits_w3ls_copyright a:hover {
     .contact-form.agile_inner_grids {
         padding: 3em 3em;
     }
-    .contact_img_agile {
-        min-height: 720px;
-    }
     .wthree_head_section h2 {
         font-size: 2.5em;
     }
@@ -1386,8 +1345,7 @@ p.agileits_w3ls_copyright a:hover {
         float: left;
         width: 50%;
     }
-    .skills,
-    .contact_img_agile {
+    .skills {
         min-height: 450px;
     }
     .w3l_footer h2 a {
@@ -1428,13 +1386,6 @@ p.agileits_w3ls_copyright a:hover {
 @media(max-width:800px) {
     .agile_banner_text_info h1 {
         font-size: 4.5em;
-    }
-}
-
-@media(max-width:768px) {
-    .skills,
-    .contact_img_agile {
-        min-height: 400px;
     }
 }
 
@@ -1505,10 +1456,6 @@ p.agileits_w3ls_copyright a:hover {
     .agile_banner_text_info h1 {
         font-size: 3.5em;
     }
-    .skills,
-    .contact_img_agile {
-        min-height: 311px;
-    }
     .bar-grids.w3-agile {
         padding: 3em 1em;
     }
@@ -1568,10 +1515,6 @@ p.agileits_w3ls_copyright a:hover {
         font-size: 2.1em;
         line-height: 1.4em;
     }
-    .skills,
-    .contact_img_agile {
-        min-height: 280px;
-    }
     .w3-agileits-services-left {
         min-height: 288px;
     }
@@ -1593,10 +1536,6 @@ p.agileits_w3ls_copyright a:hover {
 }
 
 @media(max-width:414px) {
-    .skills,
-    .contact_img_agile {
-        min-height: 225px;
-    }
     h3.agile_tittle {
         font-size: 1.8em;
     }
@@ -1677,5 +1616,13 @@ p.agileits_w3ls_copyright a:hover {
     width: 100%;
     color: white;
     z-index: 1;
-    height: 40px;
+    height: 45px;
+}
+.fix-contact-info h2 { margin: 5px; }
+.social-icon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.social-icon a {
+    color: green;
 }

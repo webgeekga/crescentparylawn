@@ -40,6 +40,10 @@
 			<br>
 			<strong>Email id: crescentpartylawn@gmail.com</strong>
 		</div>
+		<div class="pull-right social-icon">
+			<a href="https://www.facebook.com/crescentpartylawn/"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.instagram.com/crescentlawn/"><i class="fa fa-instagram"></i></a>
+		</div>
 	</div>
 	<!-- banner -->
 	<div class="banner_top" id="home">
@@ -334,8 +338,7 @@
 								<i class="fa fa-anchor" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Birthday</h5>
 							</div>
 						</div>
 						<div class="col-sm-6 services-right-grid">
@@ -343,8 +346,7 @@
 								<i class="fa fa-comment" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Wedding</h5>
 							</div>
 						</div>
 						<div class="clearfix"> </div>
@@ -355,8 +357,7 @@
 								<i class="fa fa-heartbeat" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Engagement</h5>
 							</div>
 						</div>
 						<div class="col-sm-6 services-right-grid">
@@ -364,8 +365,7 @@
 								<i class="fa fa-magnet" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Events</h5>
 							</div>
 						</div>
 						<div class="clearfix"> </div>
@@ -376,8 +376,7 @@
 								<i class="fa fa-thumbs-up" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Celebration</h5>
 							</div>
 						</div>
 						<div class="col-sm-6 services-right-grid">
@@ -385,8 +384,7 @@
 								<i class="fa fa-heartbeat" aria-hidden="true"></i>
 							</div>
 							<div class="services-icon-info">
-								<h5>Phasellus suscipit</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci enim, posuere sed tincidunt et.</p>
+								<h5>Meet ups</h5>
 							</div>
 						</div>
 						<div class="clearfix"> </div>
@@ -479,7 +477,7 @@
 	</div>
 	<!--// Gallery -->
 	<!-- agile_testimonials -->
-	<div class="agile_testimonials" id="testimonials">
+	<!-- <div class="agile_testimonials" id="testimonials">
 		<div class="container">
 			<div class="wthree_head_section test">
 				<h3 class="agile_tittle"><i class="fa fa-bullhorn" aria-hidden="true"></i> <span>Our</span> Testimonials</h3>
@@ -537,12 +535,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- //agile_testimonials -->
 
 	<!-- contact -->
 	<div class="contact" id="contact">
-		<div class="col-md-6 contact_img_agile">
+		<div class="col-md-6">
+			<div id="map" style="width:100%;height:745px;background:yellow"></div>
 		</div>
 		<div class="col-md-6 contact-form agile_inner_grids">
 			<div class="wthree_head_section two">
@@ -590,13 +589,13 @@
 					<li><a class="scroll" href="#portfolio">Photo Gallery</a></li>
 					<li><a class="scroll" href="#contact">Contact</a></li>
 				</ul>
-				<div class="w3l-social team_agile _icons">
+				<!-- <div class="w3l-social team_agile _icons">
 					<ul>
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
@@ -676,6 +675,16 @@
 			});
 		});
 	</script>
+	<script>
+		function myMap() {
+		var mapOptions = {
+			center: new google.maps.LatLng(10, -0.12),
+			zoom: 15
+		}
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_eaaXI3xlW1e6pqaXVxmJIHT8cNeo9FU&callback=myMap"></script>
 	<!-- //requried-jsfiles-for owl -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
