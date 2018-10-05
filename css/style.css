@@ -624,70 +624,17 @@ h3.agile_tittle span {
     width: 70px;
     height: 70px;
     text-align: center;
-    padding: 1.5em 0 0 0;
+    background: white;
     margin: 0 auto;
+    cursor: pointer;
+}
+.services-icon .img {
+    border: 2px solid white;
+    background: #1bb580;
 }
 
 
 /* Radial In */
-
-.hvr-radial-in {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    overflow: hidden;
-    background: #111;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
-.hvr-radial-in:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff;
-    border-radius: 100%;
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-}
-
-.hvr-radial-in:hover,
-.hvr-radial-in:focus,
-.hvr-radial-in:active {
-    color: white;
-}
-
-.services-right-grid:hover div.hvr-radial-in:before {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-
-.services-right-grid:hover i.fa {
-    color: #FFFFFF;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-}
 
 .services-icon-info h5 {
     color: #2f2f2f;
@@ -1320,10 +1267,6 @@ p.agileits_w3ls_copyright a:hover {
 }
 
 @media(max-width:991px) {
-    .w3-agileits-services-right {
-        padding: 0;
-        margin-top: 2em;
-    }
     .portfolio-grids {
         padding: 0;
         float: left;
@@ -1616,9 +1559,15 @@ p.agileits_w3ls_copyright a:hover {
     width: 100%;
     color: white;
     z-index: 1;
-    height: 45px;
+    height: 50px;
+    padding: 5px;
 }
-.fix-contact-info h2 { margin: 5px; }
+.fix-contact-info h2, .site-logo { 
+    margin: 5px;
+    text-transform: uppercase;
+    color: #ddf1e2;
+    text-shadow: 3px 4px 11px rgba(120,164,48,0.76);
+ }
 .social-icon {
     font-size: 30px;
     margin-right: 10px;
