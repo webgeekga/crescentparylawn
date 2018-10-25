@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Crescent Party Lawn</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="crescent party plot party plot in ahmedabad sindhu bhavan sindhu bhawan road">
+    <meta name="author" content="Crescent Party Lawn Sindhu Bhavan Road Ahmedabad">
+	<meta name="keywords" content="Crescent Party Plot, Crescent Party Lawn, Party plots in Ahmedabad, Premium party plot, SG road, Party plots on SG highway, SG Road Party plot, Events, banquet hall, birthday party place, event place, dj party, corporate party">
+    <title>Crescent Party Lawn</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="crescent party lawn ahmedabad" />
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -26,7 +31,22 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- font-awesome-icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
+	<script src="js/angular.min.js"></script>
+	<script src="js/angularForm.js"></script>
 	<!-- //font-awesome-icons -->
+	<span><h1 style="display:none;">Crescent Party Plot</h1></span>
+	<span><h1 style="display:none;">Crescent Party Lawn</h1></span>
+	<span><h1 style="display:none;">Party plots in Ahmedabad</h1></span>
+	<span><h1 style="display:none;">Premium party plot</h1></span>
+	<span><h1 style="display:none;">SG road</h1></span>
+	<span><h1 style="display:none;">Party plots on SG highway</h1></span>
+	<span><h1 style="display:none;">SG Road Party plot</h1></span>
+	<span><h1 style="display:none;">Events</h1></span>
+	<span><h1 style="display:none;">banquet hall</h1></span>
+	<span><h1 style="display:none;">birthday party place</h1></span>
+	<span><h1 style="display:none;">Event place</h1></span>
+	<span><h1 style="display:none;">DJ party</h1></span>
+	<span><h1 style="display:none;">corporate party</h1>
 </head>
 
 <body>
@@ -36,9 +56,9 @@
 			<h2 class="pull-left">Crescent Party Lawn</h2>
 		</div>
 		<div class="pull-right">
-			<strong>Contact NO: +91 99250 00967, +91 70410 70373</strong>
+			<strong>Mobile: +91 99250 00967, +91 70410 70373</strong>
 			<br>
-			<strong>Email id: crescentpartylawn@gmail.com</strong>
+			<strong>Email id: info@crescentlawn.in</strong>
 		</div>
 		<div class="pull-right social-icon">
 			<a href="https://www.facebook.com/crescentpartylawn/"><i class="fa fa-facebook"></i></a>
@@ -459,7 +479,7 @@
 	<!--//meetup-->
 
 	<!-- contact -->
-	<div class="contact" id="contact">
+	<div class="contact" id="contact" ng-app="contact">
 		<div class="col-md-6">
 			<div id="map" style="width:100%;height:745px;background:yellow"></div>
 		</div>
@@ -467,31 +487,42 @@
 			<div class="wthree_head_section two">
 				<h3 class="agile_tittle two"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> <span>Our</span>Contact</h3>
 			</div>
-			<form action="#" method="post">
+			<form  name="myform" class="form form-horizontal" ng-controller="contactForm" ng-submit="sendMessage(input)" novalidate>
 				<div class="fields-grid">
 					<div class="styled-input agile-styled-input-top">
-						<input type="text" name="Full Name" required="">
+						<input type="text" name="Full Name" ng-model="input.name" required="">
 						<label>Full Name</label>
 						<span></span>
 					</div>
 					<div class="styled-input agile-styled-input-top">
-						<input type="text" name="Phone" required="">
+						<input type="text" name="Phone" ng-model="input.number"required="">
 						<label>Phone</label>
 						<span></span>
 					</div>
 					<div class="styled-input">
-						<input type="email" name="Email" required="">
+						<input type="email" name="Email" ng-model="input.email" required="">
 						<label>Email</label>
+						<span></span>
+					</div>
+					<div class="styled-input">
+						<input type="text" name="BookingDate" ng-model="input.bookingDate" required="">
+						<label>Booking Date</label>
+						<span></span>
+					</div>
+					<div class="styled-input">
+						<input type="text" name="PAX" ng-model="input.pax" required="">
+						<label>No of persons</label>
 						<span></span>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
 				<div class="styled-input textarea-grid">
-					<textarea name="Message" required=""></textarea>
-					<label>Message</label>
+					<textarea name="Message" ng-model="input.message" required=""></textarea>
+					<label>Message (Function/Event Type)</label>
 					<span></span>
 				</div>
-				<input type="submit" value="SEND">
+				<p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+				<button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
 			</form>
 		</div>
 		<div class="clearfix"> </div>
@@ -593,16 +624,14 @@
 		});
 	</script>
 	<script>
-		function myMap() {
-		var mapOptions = {
-			center: new google.maps.LatLng(10, -0.12),
-			zoom: 15
+		function initMap() {
+		  var uluru = {lat: 23.0419054, lng: 72.4886435};
+		  var map = new google.maps.Map(
+			  document.getElementById('map'), {zoom: 15, center: uluru});
+		 var marker = new google.maps.Marker({position: uluru, map: map});
 		}
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-		}
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_eaaXI3xlW1e6pqaXVxmJIHT8cNeo9FU&callback=myMap"></script>
-	<!-- //requried-jsfiles-for owl -->
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWmr53x6QjeuqOYdzmmaUPQB4-T_h3Vhg&callback=initMap"></script>
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
 </body>
 
